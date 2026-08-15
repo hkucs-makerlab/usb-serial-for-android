@@ -3,4 +3,4 @@ plugins {
 }
 include 'usbSerialForAndroid', 'usbSerialExamples'
 include ':modBus'
-include ':modbusExamples'
+include ':modBusExamples'
