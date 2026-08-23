@@ -212,8 +212,7 @@ public class MainActivityRTU extends AppCompatActivity {
     public void writeCoilClickEvent(View view) {
         Log.d(TAG, "writeCoil called");
         if (m == null) return;
-        int len = 0;
-        int offset = 1;
+        int offset = 0;
         boolean value = true;
         try {
             WriteCoilRequest request = new WriteCoilRequest(slaveID, offset, value);
