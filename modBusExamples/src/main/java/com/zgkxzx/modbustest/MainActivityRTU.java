@@ -129,6 +129,7 @@ public class MainActivityRTU extends AppCompatActivity {
 
 
     public void readCoilClickEvent(View view) {
+        view.setEnabled(false);
         Log.d(TAG, "readCoil called");
         if (m == null) return;
         int len = 2;
@@ -146,10 +147,11 @@ public class MainActivityRTU extends AppCompatActivity {
         } catch (ModbusTransportException e) {
             Log.d(TAG, e.toString());
         }
-
+        view.setEnabled(true);
     }
 
     public void readDiscreteInputClickEvent(View view) {
+        view.setEnabled(false);
         Log.d(TAG, "readDiscreteInput called");
         if (m == null) return;
         int len = 5;
@@ -168,9 +170,11 @@ public class MainActivityRTU extends AppCompatActivity {
         } catch (ModbusTransportException e) {
             Log.d(TAG, e.toString());
         }
+        view.setEnabled(true);
     }
 
     public void readHoldingRegistersClickEvent(View view) throws ModbusTransportException {
+        view.setEnabled(false);
         int len = 10;
         Log.d(TAG, "readHoldingRegisters called");
         if (m == null) return;
@@ -186,9 +190,11 @@ public class MainActivityRTU extends AppCompatActivity {
         } catch (ModbusTransportException e) {
             Log.d(TAG, e.toString());
         }
+        view.setEnabled(true);
     }
 
     public void readInputRegistersClickEvent(View view) {
+        view.setEnabled(false);
         Log.d(TAG, "readInputRegisters called");
         if (m == null) return;
         int len = 8;
@@ -207,9 +213,11 @@ public class MainActivityRTU extends AppCompatActivity {
         } catch (ModbusTransportException e) {
             Log.d(TAG, e.toString());
         }
+        view.setEnabled(true);
     }
 
     public void writeCoilClickEvent(View view) {
+        view.setEnabled(false);
         Log.d(TAG, "writeCoil called");
         if (m == null) return;
         int offset = 0;
@@ -225,9 +233,11 @@ public class MainActivityRTU extends AppCompatActivity {
         } catch (ModbusTransportException e) {
             Log.d(TAG, e.toString());
         }
+        view.setEnabled(true);
     }
 
     public void writeRegisterClickEvent(View view) {
+        view.setEnabled(false);
         Log.d(TAG, "writeRegister called");
         if (m == null) return;
         int offset = 1, value = 234;
@@ -242,9 +252,11 @@ public class MainActivityRTU extends AppCompatActivity {
         } catch (ModbusTransportException e) {
             Log.d(TAG, e.toString());
         }
+        view.setEnabled(true);
     }
 
     public void writeRegistersClickEvent(View view) {
+        view.setEnabled(false);
         Log.d(TAG, "writeRegisters called");
         if (m == null) return;
         final short[] values = new short[]{211, 52, 34};
@@ -260,6 +272,7 @@ public class MainActivityRTU extends AppCompatActivity {
         } catch (ModbusTransportException e) {
             Log.d(TAG, e.toString());
         }
+        view.setEnabled(true);
     }
 
 }
